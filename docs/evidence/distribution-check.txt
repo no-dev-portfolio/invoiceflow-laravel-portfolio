@@ -1,0 +1,89 @@
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+   INFO  Discovering packages.  
+
+  laravel/pail .......................................................... DONE
+  laravel/pao ........................................................... DONE
+  laravel/tinker ........................................................ DONE
+  nesbot/carbon ......................................................... DONE
+  nunomaduro/collision .................................................. DONE
+  nunomaduro/termwind ................................................... DONE
+
+Generated optimized autoload files containing 6958 classes
+
+   INFO  Preparing database.  
+
+  Creating migration table ...................................... 12.52ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table .......................... 12.02ms DONE
+  0001_01_01_000001_create_cache_table ........................... 6.14ms DONE
+  0001_01_01_000002_create_jobs_table ............................ 8.90ms DONE
+  2026_10_26_000001_create_billing_tables ....................... 17.01ms DONE
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\DemoSeeder ........................................ RUNNING  
+  Database\Seeders\DemoSeeder .................................... 441 ms DONE  
+
+準備完了: php artisan serve --host=127.0.0.1
+
+   INFO  Nothing to migrate.  
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\DemoSeeder ........................................ RUNNING  
+  Database\Seeders\DemoSeeder ...................................... 4 ms DONE  
+
+準備完了: php artisan serve --host=127.0.0.1
+
+   PASS  Tests\Feature\BillingTest
+  ✓ guest cannot read or write billing                                   0.08s  
+  ✓ login logout and session authentication                              0.02s  
+  ✓ wrong password is rejected and throttled                             1.07s  
+  ✓ csrf is required outside testing bypass                              0.02s  
+  ✓ security headers and authenticated no store                          0.01s  
+  ✓ other user cannot view edit issue void or pay invoice                0.02s  
+  ✓ cross owner customer cannot be assigned                              0.01s  
+  ✓ dashboard lists and search do not leak other users data              0.01s  
+  ✓ customer creation and validation                                     0.01s  
+  ✓ blade escapes untrusted customer and invoice text                    0.01s  
+  ✓ invoice create calculates integer totals and audit                   0.01s  
+  ✓ client supplied totals owner and status are ignored                  0.01s  
+  ✓ invalid mixed items reject entire invoice                            0.01s  
+  ✓ amount cap is atomic and zero total rejected                         0.01s  
+  ✓ due before issue is rejected                                         0.01s  
+  ✓ draft edit requires current version                                  0.01s  
+  ✓ issued invoice is immutable and issue is idempotent                  0.01s  
+  ✓ partial then full payment and audit                                  0.01s  
+  ✓ overpayment rejected without payment or audit                        0.01s  
+  ✓ duplicate request token is idempotent after full payment             0.01s  
+  ✓ same token with different content is rejected                        0.01s  
+  ✓ draft and void invoices do not accept payments                       0.01s  
+  ✓ void rejects paid and stale invoices                                 0.01s  
+  ✓ payment date must be between issue and today                         0.01s  
+  ✓ payment rejects non integer and missing token                        0.01s  
+  ✓ pages and printable detail render                                    0.01s  
+  ✓ demo seeder is idempotent and blocked in production                  0.01s  
+  ✓ malformed old input can be rendered safely                           0.01s  
+
+   PASS  Tests\Feature\ConcurrencyTest
+  ✓ two real processes cannot overpay                                    0.15s  
+  ✓ two real processes with same token record once                       0.15s  
+
+  Tests:    30 passed (192 assertions)
+  Duration: 1.75s
+
+./composer.json is valid
+No security vulnerability advisories found.
+
+  .........................................
+
+  ──────────────────────────────────────────────────────────────────── Laravel  
+    PASS   .......................................................... 41 files  
+

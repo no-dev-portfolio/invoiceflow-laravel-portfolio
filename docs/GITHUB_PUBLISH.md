@@ -1,6 +1,6 @@
 # GitHub公開手順
 
-この作品はソースをポートフォリオとして公開するために整理済み。GitHubへのアップロードはまだ行っていない。稼働アプリの外部公開は対象外。
+この作品はソースをポートフォリオとして公開するために整理済み。公開先は [no-dev-portfolio/invoiceflow-laravel-portfolio](https://github.com/no-dev-portfolio/invoiceflow-laravel-portfolio)。稼働アプリの外部公開は対象外。
 
 ## 公開対象
 

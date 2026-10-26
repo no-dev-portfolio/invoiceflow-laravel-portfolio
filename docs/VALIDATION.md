@@ -36,6 +36,6 @@
 
 ## 再実行
 
-READMEのDockerテスト、またはcomposer testを使用。Pintでは自動生成されるbootstrap/cacheのPHPを検査対象に含めない。GitHub Actionsにも同等の検査を定義しているが、GitHub上ではまだ実行していない。
+READMEのDockerテスト、またはcomposer testを使用。Pintでは自動生成されるbootstrap/cacheのPHPを検査対象に含めない。GitHub Actionsにも同等の検査を定義しているが、[GitHub上の実行](https://github.com/no-dev-portfolio/invoiceflow-laravel-portfolio/actions/runs/40329386375)でも全ステップの成功を確認（2026-10-26）。
 
 画面画像はdocs/imagesに同梱。SQLite/PHP 8.4でのローカル検証であり、別DB、負荷試験、全ブラウザー、印刷機種、アクセシビリティ適合、本番環境の安全性の保証は含まない。制約はLIMITATIONS.mdを参照。

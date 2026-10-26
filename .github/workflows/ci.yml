@@ -1,0 +1,20 @@
+name: Laravel checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, pdo_sqlite, intl, bcmath, zip
+          coverage: none
+      - run: composer validate --strict
+      - run: composer install --prefer-dist --no-interaction
+      - run: vendor/bin/pint --test app bootstrap/app.php bootstrap/providers.php config database routes scripts tests
+      - run: cp .env.example .env
+      - run: php artisan test --no-ansi
+      - run: composer audit --locked --no-interaction

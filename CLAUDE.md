@@ -1,0 +1,1 @@
+Read AGENTS.md and docs/DESIGN.md. Independently check the stated behavior and test evidence. Keep counterexamples separate from unverified hypotheses. Do not change acceptance criteria or silently fix code during a review. Use temporary synthetic databases; do not expose the server publicly.

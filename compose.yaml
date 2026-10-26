@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: .
+      target: demo
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "false"
+      APP_URL: http://127.0.0.1:8000
+      APP_LOCALE: ja
+      APP_FALLBACK_LOCALE: en
+      DB_DATABASE: /app/storage/app/invoiceflow.sqlite
+      SESSION_DRIVER: file
+      CACHE_STORE: file
+      SEED_DEMO: "true"
+    volumes:
+      - invoiceflow_storage:/app/storage
+  tests:
+    profiles: [test]
+    build:
+      context: .
+      target: test
+volumes:
+  invoiceflow_storage:

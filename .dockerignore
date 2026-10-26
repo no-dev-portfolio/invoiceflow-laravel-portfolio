@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+!.env.example
+vendor
+node_modules
+.phpunit*
+.pint.cache
+database/*.sqlite*
+database/*.db*
+storage/logs/*
+storage/framework/cache/*
+storage/framework/views/*
+storage/framework/sessions/*
+storage/app/.demo-key
+docs/images

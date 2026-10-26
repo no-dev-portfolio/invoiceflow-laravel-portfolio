@@ -98,7 +98,7 @@ Dockerだけで試験する場合:
 docker compose --profile test run --build --rm tests
 ```
 
-実施結果は [検証報告](docs/VALIDATION.md) に記載。PHPUnitは**30テスト・192アサーション**が成功し、2つの独立したPHPプロセスによる過入金/同一トークンの競合試験を含みます。Pint・Composer定義検査・依存監査を実施しています。GitHub Actions定義は同梱していますが、リモートでの成功は公開後に確認してください。
+実施結果は [検証報告](docs/VALIDATION.md) に記載。PHPUnitは**30テスト・192アサーション**が成功し、2つの独立したPHPプロセスによる過入金/同一トークンの競合試験を含みます。Pint・Composer定義検査・依存監査を実施しています。GitHub Actionsでも品質検査・テスト・依存監査の成功を確認しました（[公開時の実行結果](https://github.com/no-dev-portfolio/invoiceflow-laravel-portfolio/actions/runs/40329386375)）。
 
 ## ドキュメント
 
